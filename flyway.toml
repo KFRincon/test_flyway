@@ -1,0 +1,28 @@
+databaseType = "PostgreSql"
+id = "31f7c2a0-bdad-4758-9976-f6a93619c669"
+name = "otro"
+
+[flyway]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+  [flyway.check]
+  majorTolerance = 0
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[redgateCompare.postgresql.options.ignores]
+ignoreNewlinesInTextObjects = "off"
+
+[environments.persona]
+url = "jdbc:postgresql://localhost:5433/test_flyway"
+schemas = [ "test" ]
+displayName = "Persona"

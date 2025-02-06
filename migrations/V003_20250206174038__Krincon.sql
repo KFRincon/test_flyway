@@ -1,0 +1,1 @@
+INSERT INTO persona (nombre, apellido, edad ) VALUES ('Juan', 'Gomez',25)
